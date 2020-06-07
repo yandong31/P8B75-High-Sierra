@@ -1,4 +1,4 @@
-###macOS Catalina & Mojave & High Sierra on Ausa P8b75
+### macOS Catalina & Mojave & High Sierra on Ausa P8b75
 
 English | [中文](README_CN.md)
 
