@@ -3,7 +3,7 @@
 [![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/releases) [![wiki](https://img.shields.io/badge/support-wiki-green.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki) [![Chat](https://img.shields.io/badge/chat-tonymacx86-red.svg)](https://www.tonymacx86.com/threads/guide-xiaomi-mi-notebook-pro-high-sierra-10-13-6.242724)
 -----
 
-macOS Catalina & Mojave & High Sierra on XiaoMi NoteBook Pro 2017 & 2018
+macOS Catalina & Mojave & High Sierra on Ausa P8b75
 
 English | [中文](README_CN.md)
 
@@ -29,15 +29,12 @@ English | [中文](README_CN.md)
 | Specifications | Detail                                                  |
 | ------------------- | ------------------------------------------- |
 | Computer model      | Xiaomi NoteBook Pro 15.6''(MX150/GTX)      |
-| Processor           | Intel Core i5-8250U/i7-8550U Processor     |
-| Memory              | 8GB/16GB Samsung DDR4 2400MHz              |
-| Hard Disk           | Samsung NVMe SSD Controller PM961/PM981    |
-| Integrated Graphics | Intel UHD Graphics 620                     |
-| Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch) |
-| Sound Card          | Realtek ALC298 (layout-id:30/99)           |
-| Wireless Card       | Intel Wireless 8265                        |
-| SD Card Reader      | Realtek RTS5129/RTS5250S                   |
-
+| Processor           | Intel E1230 v2 Processor     |
+| Memory              | 12GB 海盗船 DDR3 1600MHz              |
+| Hard Disk           | WD NVMe SSD Controller 512GB    |
+| Integrated Graphics | Nvidia GeForce GTX 670                    |
+| Monitor             | LG Ultra HD 3840x2160 (27 inch) |
+| Sound Card          | Realtek ALC887 (layout-id:1)           |
 
 ## Current Status in Clover
 
