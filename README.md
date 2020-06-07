@@ -28,7 +28,7 @@ English | [中文](README_CN.md)
 
 | Specifications | Detail                                                  |
 | ------------------- | ------------------------------------------- |
-| Computer model      | Xiaomi NoteBook Pro 15.6''(MX150/GTX)      |
+| Computer model      | Ausa P8B75      |
 | Processor           | Intel E1230 v2 Processor     |
 | Memory              | 12GB 海盗船 DDR3 1600MHz              |
 | Hard Disk           | WD NVMe SSD Controller 512GB    |
