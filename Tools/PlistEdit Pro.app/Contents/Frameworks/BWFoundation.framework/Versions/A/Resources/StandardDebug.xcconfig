@@ -1,0 +1,11 @@
+//
+//  StandardDebug.xcconfig
+//  PlistEditPro
+//
+//  Created by Brian Webster on 11/8/13.
+//  Copyright (c) 2013 Brian Webster. All rights reserved.
+//
+
+BW_CONFIG_GCC_PREPROCESSOR_DEFINITIONS = $(inherited) BW_DEBUG=1
+OTHER_CODE_SIGN_FLAGS = --timestamp=none
+DEBUG_INFORMATION_FORMAT = dwarf
