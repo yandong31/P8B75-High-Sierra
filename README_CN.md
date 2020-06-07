@@ -1,9 +1,9 @@
-<img src="Docs/img/XiaoMi_Hackintosh_with_text_Small_cn.png" width="703" height="48"/>
 
-[![release](https://img.shields.io/badge/下载-release-blue.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/releases) [![wiki](https://img.shields.io/badge/支持-wiki-green.svg)](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/主页) [![讨论](https://img.shields.io/badge/讨论-QQ-red.svg)](https://shang.qq.com/wpa/qunwpa?idkey=d7b67735bb8c24ed2085a7ebfe0f53ce197bcc84b6397e41a3aaaaf9664966a8)
+
+
 -----
 
-让你的小米笔记本Pro 2017 & 2018 装上 macOS Catalina & Mojave & High Sierra 
+## **macOS Catalina & Mojave & High Sierra** 
 
 [English](README.md) | 中文
 
@@ -26,17 +26,17 @@
 
 ## 电脑配置
 
-| 规格     | 详细信息                                     |
-| -------- | ---------------------------------------- |
-| 电脑型号 | 小米笔记本电脑Pro 15.6''(MX150/GTX)             |
-| 处理器   | 英特尔 酷睿 i5-8250U/i7-8550U 处理器             |
-| 内存     | 8GB/16GB 三星 DDR4 2400MHz                 |
-| 硬盘     | 三星 NVMe固态硬盘 PM961/PM981                  |
-| 集成显卡 | 英特尔 UHD 图形620                            |
-| 显示器   | 京东方 NV156FHM-N61 FHD 1920x1080 (15.6 英寸) |
-| 声卡     | 瑞昱 ALC298 (节点:30/99)                     |
-| 网卡     | 英特尔 无线 8265                              |
-| 读卡器   | 瑞昱 RTS5129/RTS5250S                      |
+| 规格     | 详细信息                               |
+| -------- | -------------------------------------- |
+| 电脑型号 | 华硕 P8B75                             |
+| 处理器   | 英特尔 E1230 v2 处理器                 |
+| 内存     | 12GB 海盗船 DDR3 1600MHz               |
+| 硬盘     | 西部数据 NVMe固态硬盘 512GB            |
+| 独立显卡 | 英伟达 影驰 GTX670                     |
+| 显示器   | LG  27寸 4K 显示器 3840x2160 (27 英寸) |
+| 声卡     | 瑞昱 ALC887 (节点:1)                   |
+| 网卡     | Realtek RTL8111                        |
+|          |                                        |
 
 
 ## Clover版本的目前情况
@@ -78,12 +78,12 @@
 - 如果安装过程中触控板失效，请在安装前插上有线鼠标或者无线鼠标发射器。安装完成后打开 `终端.app` 并运行 `sudo kextcache -i /`，等待进程结束重启即可使用触控板。
 - 完整的EFI附件请访问 [releases](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/releases) 页面。
  - 如果是日常使用，请不要克隆或者下载master分支。
- 
+
  <img src="Docs/img/README_donot_Clone_or_Download.jpg" width="300px" alt="donot_clone_or_download">
  <img src="Docs/img/README_get_Release.jpg" width="300px" alt="get_release">
- 
+
  ### 构建
- 
+
  - 如果要构建最新测试版EFI，在终端输入以下命令：
  ```
  sh -c "$(curl -fsSL https://raw.githubusercontent.com/daliansky/XiaoMi-Pro-Hackintosh/master/makefile.sh)"
@@ -94,9 +94,9 @@
  cd XiaoMi-Pro-Hackintosh
  ./makefile.sh
  ```
- 
+
  ### 更新
- 
+
 - 完整替换 `BOOT` 和 `CLOVER`(或 `OC`)文件夹。首先删除他们，然后从[release 包里](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/releases)拷贝新的。
 - 你也可以在终端输入以下命令来更新Clover EFI：
 
