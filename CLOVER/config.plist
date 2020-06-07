@@ -4,65 +4,172 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>AutoMerge</key>
-		<true/>
-		<key>FixHeaders</key>
-		<true/>
 		<key>DSDT</key>
 		<dict>
+			<key>Debug</key>
+			<false/>
+			<key>DropOEM_DSM</key>
+			<false/>
+			<key>Fixes</key>
+			<dict>
+				<key>FakeLPC</key>
+				<false/>
+				<key>FixShutdown</key>
+				<true/>
+			</dict>
+			<key>Name</key>
+			<string>DSDT.aml</string>
 			<key>Patches</key>
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml (Instant Wake)</string>
+					<string>Rename ALZA to HDEF X99</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>R1BSVwI=</data>
+					<data>
+					QUxaQQ==
+					</data>
 					<key>Replace</key>
-					<data>WFBSVwI=</data>
+					<data>
+					SERFRg==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(LGPA,1,S) to XGPA, pair with SSDT-LGPA.aml (Brightness Key)</string>
+					<string>Rename HDAS to HDEF Z170</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>TEdQQQk=</data>
+					<data>
+					SERBUw==
+					</data>
 					<key>Replace</key>
-					<data>WEdQQQk=</data>
+					<data>
+					SERFRg==
+					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Rename Method(_UPC,0,S) to XUPC, pair with SSDT-USB.aml (USB Port Customization)</string>
+					<string>Rename EHC1 to HDEF EH01</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>X1VQQwg=</data>
+					<data>
+					RUhDMQ==
+					</data>
 					<key>Replace</key>
-					<data>WFVQQwg=</data>
+					<data>
+					RUgwMQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename EHC2 to HDEF EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename XHC1 to HDEF XHC</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					WEhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUhD
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename EUSB to HDEF EH01</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					RVVTQg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Rename USBE to HDEF EH02</string>
+					<key>Disabled</key>
+					<true/>
+					<key>Find</key>
+					<data>
+					VVNCRQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0RTTQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WERTTQ==
+					</data>
 				</dict>
 			</array>
+			<key>ReuseFFFF</key>
+			<false/>
+			<key>SlpSmiAtWake</key>
+			<true/>
 		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
-			<false/>
+			<true/>
+			<key>EnableC6</key>
+			<true/>
 			<key>Generate</key>
 			<dict>
-				<key>PluginType</key>
-				<false/>
+				<key>CStates</key>
+				<true/>
+				<key>PStates</key>
+				<true/>
 			</dict>
-			<key>NoOemTableId</key>
-			<false/>
+			<key>PluginType</key>
+			<string>1</string>
+			<key>UseSystemIO</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>darkwake=0 dart=0 gfxrst=1</string>
+		<string>dart=0 nvda_drv=1 kext-dev-mode=1 rootless=0</string>
+		<key>Debug</key>
+		<false/>
+		<key>DefaultLoader</key>
+		<string>boot.efi</string>
 		<key>DefaultVolume</key>
-		<string>LastBootedVolume</string>
+		<string>WDSSD</string>
+		<key>HibernationFixup</key>
+		<false/>
 		<key>Legacy</key>
 		<string>PBR</string>
 		<key>NoEarlyProgress</key>
@@ -70,226 +177,155 @@
 		<key>Secure</key>
 		<false/>
 		<key>Timeout</key>
-		<integer>4</integer>
-		<key>HibernationFixup</key>
-		<true/>
+		<integer>3</integer>
+		<key>XMPDetection</key>
+		<false/>
+	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>UseARTFrequency</key>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>AddProperties</key>
+		<array>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL00,PanelPowerUp</string>
+				<key>Value</key>
+				<data>
+				MAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL00,PanelCycleDelay</string>
+				<key>Value</key>
+				<data>
+				+gAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL00,PanelPowerDown</string>
+				<key>Value</key>
+				<data>
+				PAAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL,Gfx324</string>
+				<key>Value</key>
+				<data>
+				AQAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL00,PanelPowerOn</string>
+				<key>Value</key>
+				<data>
+				GQEAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL00,PanelPowerOff</string>
+				<key>Value</key>
+				<data>
+				EQAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>hda-gfx</string>
+				<key>Value</key>
+				<string>onboard-1</string>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>AAPL,GfxYTile</string>
+				<key>Value</key>
+				<data>
+				AQAAAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Device</key>
+				<string>IntelGFX</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Key</key>
+				<string>graphic-options</string>
+				<key>Value</key>
+				<data>
+				DAAAAA==
+				</data>
+			</dict>
+		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
-			<string>No</string>
+			<integer>1</integer>
+			<key>ResetHDA</key>
+			<true/>
 		</dict>
-		<key>Properties</key>
-		<dict>
-			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>AAPL,ig-platform-id</key>
-				<data>AAAWWQ==</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>complete-modeset-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>device-id</key>
-				<data>FlkAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>force-online-framebuffers</key>
-				<data>AAAAAAAAAAE=</data>
-				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con0-flags</key>
-				<data>mAQAAA==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-con1-pipe</key>
-				<data>CgAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
-				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con2-flags</key>
-				<data>xwMAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-flags</key>
-				<data>CwfjAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>System Peripheral</string>
-				<key>model</key>
-				<string>Intel Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th Gen Core Processor Gaussian Mixture Model</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP USB 3.0 xHCI Controller</string>
-				<key>name</key>
-				<string>pci8086,9d2f</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal processing controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Thermal subsystem</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Serial IO I2C Controller #0</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x1)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Signal Processing Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP Serial IO I2C Controller #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Communication Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP CSME HECI #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x0)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>NVIDIA GeForce MX150</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x4)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x4)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #5</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x7)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1c,0x7)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Wireless 8265</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)</key>
-			<dict>
-				<key>reg-ltrovr</key>
-				<data>AAQAAAAAAAA=</data>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1d,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PCI Express Root Port #9</string>
-				<key>use-msi</key>
-				<string>1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point LPC Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>device_type</key>
-				<string>Memory Controller</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP PMC</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>hda-idle-support</key>
-				<string>1</string>
-				<key>layout-id</key>
-				<integer>30</integer>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP HD Audio</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1f,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal</string>
-				<key>model</key>
-				<string>Intel Sunrise Point-LP SMBus</string>
-			</dict>
-		</dict>
-		<key>SetIntelBacklight</key>
-		<true/>
-		<key>SetIntelMaxBacklight</key>
-		<true/>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
 			<true/>
-			<key>HighCurrent</key>
-			<false/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>GUI</key>
 	<dict>
-		<key>Hide</key>
-		<array>
-			<string>Preboot</string>
-			<string>Recovery</string>
-		</array>
+		<key>Language</key>
+		<string>zh_CN:0</string>
 		<key>Mouse</key>
 		<dict>
+			<key>DoubleClick</key>
+			<integer>500</integer>
 			<key>Enabled</key>
 			<false/>
+			<key>Mirror</key>
+			<false/>
+			<key>Speed</key>
+			<integer>8</integer>
 		</dict>
 		<key>Scan</key>
 		<dict>
@@ -298,22 +334,17 @@
 			<key>Legacy</key>
 			<false/>
 			<key>Linux</key>
-			<true/>
+			<false/>
 			<key>Tool</key>
 			<true/>
 		</dict>
 		<key>ScreenResolution</key>
 		<string>1920x1080</string>
 		<key>Theme</key>
-		<string>Xiaomi</string>
+		<string>One</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>EDID</key>
-		<dict>
-			<key>Inject</key>
-			<true/>
-		</dict>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -323,65 +354,496 @@
 			<key>NVidia</key>
 			<false/>
 		</dict>
+		<key>NvidiaGeneric</key>
+		<true/>
+		<key>NvidiaSingle</key>
+		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
+		<key>AppleIntelCPUPM</key>
+		<false/>
 		<key>AppleRTC</key>
 		<true/>
-		<key>PanicNoKextDump</key>
-		<true/>
+		<key>Debug</key>
+		<false/>
+		<key>DellSMBIOSPatch</key>
+		<false/>
+		<key>KernelCpu</key>
+		<false/>
+		<key>KernelLapic</key>
+		<false/>
+		<key>KernelPm</key>
+		<false/>
+		<key>KernelXCPM</key>
+		<false/>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>External icons patch</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				RXh0ZXJuYWw=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleAHCIPort</string>
+				<key>Replace</key>
+				<data>
+				SW50ZXJuYWw=
+				</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
+				<data>
+				AEFQUExFIFNTRAA=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IOAHCIBlockStorage</string>
 				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
+				<data>
+				AAAAAAAAAAAAAAA=
+				</data>
 			</dict>
-		</array>
-		<key>KernelToPatch</key>
-		<array>
 			<dict>
-				<key>Comment</key>
-				<string>Disable kernel panic on setPowerState timeout with setpowerstate_panic=0 boot-args on 10.15 (credit vit9696)</string>
 				<key>Disabled</key>
 				<false/>
-				<key>MatchOS</key>
-				<string>10.15.x</string>
 				<key>Find</key>
-				<data>Y29tLmFwcGxlAA==</data>
+				<data>
+				SImLqAAAAA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
 				<key>Replace</key>
-				<data>bm90LmFwcGxlAA==</data>
+				<data>
+				kJCQkJCQkA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.13</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				g32MEA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>
+				g32MGQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.12</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g710////EA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>
+				g710////Gw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.11</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				g72M/v//EA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>
+				g72M/v//Hw==
+				</data>
+			</dict>
+			<dict>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				SIXAdAeAixgBAAAQ
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				kJCQkJCAixgBAAAQ
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#1</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				weAMBQAQAACJgw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				weAJBQAQAACJgw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				D7aMiIIAAACD+QwPhTIBAA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				D7aMiIIAAACD+QkPhTIBAA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#3</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				AMeDpAAAAAAQAABIi0gISA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				AMeDpAAAAAACAABIi0gISA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#4</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				SYnGTYX2dGFBwecMSWP/vg==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				SYnGTYX2dGFBwecJSWP/vg==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#5</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				hv8PAABIwegMD7cPgeH/Dw==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				hv8PAABIwegJD7cPgeH/Dw==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#6_7</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				icGB4f8PAABIAdFIgfn/DwAAdzs=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				icGB4f8BAABIAdFIgfn/AQAAdzs=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#8</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				SYHF/w8AAEnB7QxJiwQkSA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				SYHF/w8AAEnB7QlJiwQkSA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#9_10</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				BgIAAEyNuAAQAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
+				AABBvAAQAABJKfQ=
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				BgIAAEyNuAACAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
+				AABBvAACAABJKfQ=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#11</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				AABJiY4iAQAAugAQAABIKQ==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				AABJiY4iAQAAugACAABIKQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#12</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				yAAAAEkp17gAEAAATYskJA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				yAAAAEkp17gAAgAATYskJA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#13</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				4b+AQBUGTYnWugAQAABFMQ==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				4b+AQBUGTYnWugACAABFMQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#14</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				iWTY+EmBxAAQAABJgccA8A==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				iWTY+EmBxAACAABJgccA8A==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#15</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				Bf8PAABIwegMZvfB/w8PlQ==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				Bf8PAABIwegJZvfB/w8PlQ==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#16</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				weIIQQ+2wcHgDEQJ0EQJwA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				weIIQQ+2wcHgCUQJ0EQJwA==
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>IONVMeFamily Pike R. Alpha Patch#17</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>
+				RYTJD5XAD7bAweAMRAnYRA==
+				</data>
+				<key>InfoPlistPatch</key>
+				<false/>
+				<key>Name</key>
+				<string>IONVMeFamily</string>
+				<key>Replace</key>
+				<data>
+				RYTJD5XAD7bAweAJRAnYRA==
+				</data>
 			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x3e7</string>
+		<key>MLB</key>
+		<string>C02KKFWFF693YN0AS</string>
 		<key>ROM</key>
-		<string>UseMacAddr0</string>
+		<data>
+		EL9I4LEi
+		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
+		<key>BiosReleaseDate</key>
+		<string>08/08/2017</string>
+		<key>BiosVendor</key>
+		<string>Apple Inc.</string>
+		<key>BiosVersion</key>
+		<string>MP61.88Z.0120.B00.1708080652</string>
+		<key>Board-ID</key>
+		<string>Mac-27ADBB7B4CEE8E61</string>
+		<key>BoardManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>BoardSerialNumber</key>
+		<string>C02KKFWFF693YN0AS</string>
+		<key>BoardType</key>
+		<integer>11</integer>
+		<key>BoardVersion</key>
+		<string>MacPro6,1</string>
+		<key>ChassisAssetTag</key>
+		<string>Pro-Enclosure</string>
+		<key>ChassisManufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ChassisType</key>
+		<string>0x02</string>
+		<key>Family</key>
+		<string>MacPro</string>
+		<key>FirmwareFeatures</key>
+		<string>0xE80FE136</string>
+		<key>FirmwareFeaturesMask</key>
+		<string>0xFF1FFF3F</string>
+		<key>LocationInChassis</key>
+		<string>Part Component</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>Mobile</key>
+		<false/>
+		<key>PlatformFeature</key>
+		<string>0x04</string>
 		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
+		<string>MacPro6,1</string>
+		<key>SerialNumber</key>
+		<string>C02KKFWFF693</string>
+		<key>SmUUID</key>
+		<string>A0767186-1BD8-DD11-991E-10BF48E0B122</string>
 		<key>Trust</key>
 		<true/>
+		<key>Version</key>
+		<string>1.0</string>
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>
+		<true/>
+		<key>NoCaches</key>
 		<true/>
 	</dict>
 </dict>
