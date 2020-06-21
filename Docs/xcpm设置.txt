@@ -1,0 +1,106 @@
+#######################目前用这个，有效###################################
+<dict>
+	<key>Base</key>
+	<string>_xcpm_bootstrap</string>
+	<key>Comment</key>
+	<string>_xcpm_bootstrap (For Ivy Bridge) 10.15.5 by MacNB</string>
+	<key>Count</key>
+	<integer>1</integer>
+	<key>Enabled</key>
+	<true/>
+	<key>Find</key>
+	<data>
+	jUPEPEI=
+	</data>
+	<key>Identifier</key>
+	<string>kernel</string>
+	<key>Limit</key>
+	<integer>0</integer>
+	<key>Mask</key>
+	<data>
+	</data>
+	<key>MaxKernel</key>
+	<string>19.99.99</string>
+	<key>MinKernel</key>
+	<string>19.5.0</string>
+	<key>Replace</key>
+	<data>
+	jUPGPEI=
+	</data>
+	<key>ReplaceMask</key>
+	<data>
+	</data>
+	<key>Skip</key>
+	<integer>0</integer>
+</dict>
+##########################################################################################
+<dict>
+	<key>Base</key>
+	<string>_xcpm_bootstrap</string>
+	<key>Comment</key>
+	<string>_xcpm_bootstrap (For Ivy Bridge) 10.15.4+ by vectorsigma72</string>
+	<key>Count</key>
+	<integer>1</integer>
+	<key>Enabled</key>
+	<true/>
+	<key>Find</key>
+	<data>
+	3B7E2E80 C3C480FB 42
+	</data>
+	<key>Identifier</key>
+	<string>kernel</string>
+	<key>Limit</key>
+	<integer>0</integer>
+	<key>Mask</key>
+	<data>
+	</data>
+	<key>MaxKernel</key>
+	<string>19.99.99</string>
+	<key>MinKernel</key>
+	<string>19.5.0</string>
+	<key>Replace</key>
+	<data>
+	007E2E80 C3C180FB 42
+	</data>
+	<key>ReplaceMask</key>
+	<data>
+	</data>
+	<key>Skip</key>
+	<integer>0</integer>
+</dict>
+只需确保将AppleXcpmExtraMsrs设置为true即可。
+###########################################################################################
+<dict>
+	<key>Base</key>
+	<string>_xcpm_bootstrap</string>
+	<key>Comment</key>
+	<string>xcpm_bootstrap IvyBridge (c) Pike R. Alpha Modify By N.Mano</string>
+	<key>Count</key>
+	<integer>1</integer>
+	<key>Enabled</key>
+	<true/>
+	<key>Find</key>
+	<data>
+	80C3C480 FB42
+	</data>
+	<key>Identifier</key>
+	<string>kernel</string>
+	<key>Limit</key>
+	<integer>0</integer>
+	<key>Mask</key>
+	<data>
+	</data>
+	<key>MaxKernel</key>
+	<string>19.99.99</string>
+	<key>MinKernel</key>
+	<string>19.5.0</string>
+	<key>Replace</key>
+	<data>
+	80C3C680 FB42
+	</data>
+	<key>ReplaceMask</key>
+	<data>
+	</data>
+	<key>Skip</key>
+	<integer>0</integer>
+</dict>
