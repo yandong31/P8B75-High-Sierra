@@ -4,18 +4,20 @@
 	<dict>
 		<key>files</key>
 		<dict>
+			<key>Resources/AppIcon.icns</key>
+			<data>i1DX58xitx0bJgPcvkqk47CzMYM=</data>
+			<key>Resources/Assets.car</key>
+			<data>PTtqxjjJxxZlCahVX79LeMUCsSw=</data>
 			<key>Resources/Intel Power Gadget EULA.rtf</key>
-			<data>fjtk8gIS5hoazx2hcGsUA0TncuQ=</data>
-			<key>Resources/IntelPowerGadget.icns</key>
-			<data>70GuPVLXXKw2ILZYtCtAjf0r7Bo=</data>
-			<key>Resources/Intel_logo.png</key>
-			<data>qbzf7JzL2Tfk0NChTci0l9hExK8=</data>
+			<data>zDgz7u0D0SyRoXM6/bRsjaxdnjo=</data>
 			<key>Resources/MainMenu.nib</key>
-			<data>Fh9Eu3UbdjbV6/eIL8d5fVxo3ko=</data>
+			<data>m038euO+BKXKqzyfQuGaZ4kQK/8=</data>
+			<key>Resources/default.metallib</key>
+			<data>IoYdVzn7SOL30b2hWI1d26TWae4=</data>
 			<key>Resources/en.lproj/Credits.rtf</key>
 			<dict>
 				<key>hash</key>
-				<data>MngBtjULyoS+lkRRxPTlifvnRRc=</data>
+				<data>uOrmYD4uv7wJ/ZqeZvhM7Wrm5pM=</data>
 				<key>optional</key>
 				<true/>
 			</dict>
@@ -25,22 +27,24 @@
 			<key>Frameworks/CorePlot.framework</key>
 			<dict>
 				<key>cdhash</key>
-				<data>m1i4rVDPj0wSH9uL4+QRZrcQ+NY=</data>
+				<data>9G+6yXOAfbV3vqKhsp9qVp93QM+ZON0auLUSIawDVyk=</data>
 				<key>requirement</key>
 				<string>anchor apple generic</string>
 			</dict>
+			<key>Resources/AppIcon.icns</key>
+			<data>F8cB9Lu2rZC7oHB8Mp3pfvM+PhR8frPj7I01QgIbUgg=</data>
+			<key>Resources/Assets.car</key>
+			<data>vIhu0upck8utFdPRbE1i9s35DcfqQeC3TB4f2dQDiIM=</data>
 			<key>Resources/Intel Power Gadget EULA.rtf</key>
-			<data>fjtk8gIS5hoazx2hcGsUA0TncuQ=</data>
-			<key>Resources/IntelPowerGadget.icns</key>
-			<data>70GuPVLXXKw2ILZYtCtAjf0r7Bo=</data>
-			<key>Resources/Intel_logo.png</key>
-			<data>qbzf7JzL2Tfk0NChTci0l9hExK8=</data>
+			<data>igca/V/Qem07DEgcVd/LGyoukH49u/NYsiyQ8zhaZ5E=</data>
 			<key>Resources/MainMenu.nib</key>
-			<data>Fh9Eu3UbdjbV6/eIL8d5fVxo3ko=</data>
+			<data>RU7QrKpghqgxRIv4DOxaZ/tybkhAhact/d0Bdb9GgbE=</data>
+			<key>Resources/default.metallib</key>
+			<data>AQ6sY/n3CzhdvSQSfbgrUpKjrq4hoFSATRtC63Dgq0E=</data>
 			<key>Resources/en.lproj/Credits.rtf</key>
 			<dict>
-				<key>hash</key>
-				<data>MngBtjULyoS+lkRRxPTlifvnRRc=</data>
+				<key>hash2</key>
+				<data>JhHbK947PcI47pCA4EcMyuqnkFcfpybV0wMBmueixuU=</data>
 				<key>optional</key>
 				<true/>
 			</dict>
@@ -80,6 +84,11 @@
 				<key>weight</key>
 				<real>2000</real>
 			</dict>
+			<key>^Resources/</key>
+			<dict>
+				<key>weight</key>
+				<real>20</real>
+			</dict>
 			<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
 			<dict>
 				<key>nested</key>
@@ -89,25 +98,6 @@
 			</dict>
 			<key>^.*</key>
 			<true/>
-			<key>^Info\.plist$</key>
-			<dict>
-				<key>omit</key>
-				<true/>
-				<key>weight</key>
-				<real>20</real>
-			</dict>
-			<key>^PkgInfo$</key>
-			<dict>
-				<key>omit</key>
-				<true/>
-				<key>weight</key>
-				<real>20</real>
-			</dict>
-			<key>^Resources/</key>
-			<dict>
-				<key>weight</key>
-				<real>20</real>
-			</dict>
 			<key>^Resources/.*\.lproj/</key>
 			<dict>
 				<key>optional</key>
@@ -121,6 +111,20 @@
 				<true/>
 				<key>weight</key>
 				<real>1100</real>
+			</dict>
+			<key>^Info\.plist$</key>
+			<dict>
+				<key>omit</key>
+				<true/>
+				<key>weight</key>
+				<real>20</real>
+			</dict>
+			<key>^PkgInfo$</key>
+			<dict>
+				<key>omit</key>
+				<true/>
+				<key>weight</key>
+				<real>20</real>
 			</dict>
 			<key>^[^/]+$</key>
 			<dict>

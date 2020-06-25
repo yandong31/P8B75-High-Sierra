@@ -5,7 +5,7 @@
 "2TV-zh-dka.headerToolTip" = "String[TableId]/Nummer[Länge]";
 
 /* Class = "NSButton"; ibShadowedToolTip = "<key>DropOem</key>\n<true/>\nDrops all internal SSDT tables to avoid conflicts when generating an SSDT for your processor, which contains P- and C-States. Clover can do this automatically or you can specify an external file, which will be loaded from EFI/OEM/[model]/ACPI/patched."; ObjectID = "3OB-Qg-u2B"; */
-"3OB-Qg-u2B.ibShadowedToolTip" = "<key>DropOem</ key><true/>Löscht alle internen SSDT-Tabellen, um Konflikte zu vermeiden, wenn ein SSDT für Ihren Prozessor generiert wird, der P- und C-States enthält. Clover kann dies automatisch tun, oder Sie können eine externe Datei angeben, die von EFI/OEM/[model]/ACPI/patched geladen wird.";
+"3OB-Qg-u2B.ibShadowedToolTip" = "<key>DropOem</key><true/>Löscht alle internen SSDT-Tabellen, um Konflikte zu vermeiden, wenn ein SSDT für Ihren Prozessor generiert wird, der P- und C-States enthält. Clover kann dies automatisch tun, oder Sie können eine externe Datei angeben, die von EFI/OEM/[model]/ACPI/patched geladen wird.";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Renames device AC0 to ADP1."; ObjectID = "4L0-lZ-ZbZ"; */
 "4L0-lZ-ZbZ.ibShadowedToolTip" = "Benennt Gerät AC0 in ADP1 um.";
